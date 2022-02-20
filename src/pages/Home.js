@@ -1,7 +1,7 @@
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import SignIn from "../components/signing_components/SignIn";
-import SignOut from "../components/signing_components/SignOut";
+import SignIn from '../components/signing_components/SignIn';
+import SignOut from '../components/signing_components/SignOut';
 
 export const Home = () => {
 

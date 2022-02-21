@@ -7,6 +7,7 @@ export const topbarStyles = StyleSheet.create({
         padding:"10px",
         backgroundColor: 'orange',
         alignItems: 'center',
+        height:"10vh"
     },
     title:{
         color:"white",

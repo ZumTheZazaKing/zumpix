@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import UploadDialog from '../components/dashboard_components/UploadDialog';
-import DashboardGallery from '../components/dashboard_components/DashboardGallery';
+import DashboardGallery from '../components/dashboard_components/DashboardGallery'
 
 export const Dashboard = () => {
 

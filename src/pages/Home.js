@@ -1,4 +1,4 @@
-import HomeGallery from "../components/home_components/HomeGallery";
+import HomeGallery from '../components/home_components/HomeGallery';
 
 export const Home = () => {
 

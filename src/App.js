@@ -30,8 +30,7 @@ function App() {
     const userPayload = {
       name:auth.currentUser.displayName,
       avatar:auth.currentUser.photoURL,
-      description:"No description yet",
-      pictures:[]
+      description:"No description yet"
     }
     await setDoc(userDocRef, userPayload);
   }
@@ -44,7 +43,7 @@ function App() {
           <Topbar/>
             <Routes>
               <Route path="/" element={<Home/>}/>
-              <Route path="/dashboard" element={<Dashboard/>}/>
+              <Route path="/dashboard/:userId" element={<Dashboard/>}/>
           </Routes>
         </Suspense>}
       </div>

@@ -15,7 +15,7 @@ export default function ProfileMenu(props){
         .catch(err => {return})
     }
 
-    const goToDashboard = () => {navigate('/dashboard')}
+    const goToDashboard = () => {navigate(`/dashboard/${auth.currentUser.uid}`)}
 
     return (
         <Menu

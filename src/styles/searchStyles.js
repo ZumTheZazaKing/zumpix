@@ -2,6 +2,10 @@ import { StyleSheet } from 'aphrodite';
 
 export const searchStyles = StyleSheet.create({
     searchBar:{
-        border:"1px solid black"
+        padding:"10px",
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        
     }
 })

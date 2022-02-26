@@ -12,6 +12,7 @@ export default function HomeGallery(){
 
     useEffect(() => {
         getLatestImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const getLatestImages = async () => {

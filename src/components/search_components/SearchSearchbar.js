@@ -3,6 +3,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputAdornment from '@mui/material/InputAdornment';
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
+import { css } from 'aphrodite';
+import { searchStyles } from '../../styles/searchStyles';
 
 export default function SearchSearchbar(props) {
 
@@ -16,7 +18,7 @@ export default function SearchSearchbar(props) {
     }
 
     return (
-        <form onSubmit={e => search(e)}>
+        <form className={css(searchStyles.searchBar)} onSubmit={e => search(e)}>
             <TextField 
                 placeholder="Search..." 
                 variant="standard"

@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import UploadDialog from '../components/dashboard_components/UploadDialog';
 import DashboardGallery from '../components/dashboard_components/DashboardGallery'
+import { Helmet } from 'react-helmet';
 
 export const Dashboard = () => {
 
@@ -20,6 +21,7 @@ export const Dashboard = () => {
 
     useEffect(() => {
         getUserData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const getUserData = async () => {
@@ -30,6 +32,9 @@ export const Dashboard = () => {
 
     return ( userData ?
         <div className={css(dashboardStyles.container)}>
+            <Helmet>
+                <title>ZumPix | {userData.name}</title>
+            </Helmet>
             <div className={css(dashboardStyles.header)}>
                 <img className={css(dashboardStyles.headerImage)} src={userData.avatar} alt={userData.name}/>
                 <div className={css(dashboardStyles.rightHeader)}>
@@ -54,6 +59,11 @@ export const Dashboard = () => {
                 <DashboardGallery userId={userId}/>
             </div>
         </div> :
-        <div className="nighLoading"><CircularProgress disableShrink size={60} thickness={5}/></div>
+        <div className="nighLoading">
+            <Helmet>
+                <title>ZumPix | Loading...</title>
+            </Helmet>
+            <CircularProgress disableShrink size={60} thickness={5}/>
+        </div>
     )
 }

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
-import { css } from 'aphrodite';
 import SearchSearchbar from '../components/search_components/SearchSearchbar';
+import SearchGallery from '../components/search_components/SearchGallery';
+import { Helmet } from 'react-helmet';
 
 export const Search = () => {
 
@@ -8,8 +9,11 @@ export const Search = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>ZumPix | {query}</title>
+            </Helmet>
             <SearchSearchbar query={query}/>
-            <h1>{query}</h1>
+            <SearchGallery query={query}/>
         </div>
     )
 }

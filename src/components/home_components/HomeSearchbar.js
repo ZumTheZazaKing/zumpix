@@ -6,7 +6,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 
-export default function Searchbar(){
+export default function HomeSearchbar(){
 
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
@@ -36,6 +36,7 @@ export default function Searchbar(){
                           </InputAdornment>
                         ),
                     }}
+                    autoComplete='off'
                 />
             </form>
         </div>

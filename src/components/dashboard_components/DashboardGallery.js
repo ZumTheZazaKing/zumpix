@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { css } from 'aphrodite';
 import { dashboardStyles } from '../../styles/dashboardStyles';
 import CircularProgress from '@mui/material/CircularProgress';
+import GalleryImage from '../GalleryImage';
 
 export default function DashboardGallery(props){
 
@@ -34,13 +35,7 @@ export default function DashboardGallery(props){
             {images && images.length > 0 ? 
             <div className={css(dashboardStyles.galleryImages)}>
             {images.map((image,i) => {
-                return (
-                    <div key={i}>
-                        <img 
-                        className={css(dashboardStyles.galleryImage)}
-                        src={image.data().url} alt={image.data().name}/>
-                    </div>
-                )
+                return <GalleryImage key={i} image={image}/>
             })}
         </div> : 
         <div><CircularProgress disableShrink size={60} thickness={5}/></div>}

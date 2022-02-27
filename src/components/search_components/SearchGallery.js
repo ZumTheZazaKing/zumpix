@@ -3,6 +3,7 @@ import { collection, orderBy, getDocs, limit, query, where } from 'firebase/fire
 import { useEffect, useState } from 'react';
 import { css } from 'aphrodite';
 import { dashboardStyles } from '../../styles/dashboardStyles';
+import GalleryImage from '../GalleryImage';
 
 export default function SearchGallery(props){
 
@@ -26,13 +27,7 @@ export default function SearchGallery(props){
             {searchImages && searchImages.length > 0 ? 
             <div className={css(dashboardStyles.galleryImages)}>
             {searchImages.map((image,i) => {
-                return (
-                    <div key={i}>
-                        <img 
-                        className={css(dashboardStyles.galleryImage)}
-                        src={image.data().url} alt={image.data().name}/>
-                    </div>
-                )
+                return <GalleryImage key={i} image={image}/>
             })}
         </div> : 
         <div><h3 style={{lineHeight:1.5}}>No images available for this search（─.─||）</h3></div>}

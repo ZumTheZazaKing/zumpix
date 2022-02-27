@@ -27,7 +27,7 @@ export default function SearchGallery(props){
             {searchImages && searchImages.length > 0 ? 
             <div className={css(dashboardStyles.galleryImages)}>
             {searchImages.map((image,i) => {
-                return <GalleryImage key={i} image={image}/>
+                return <GalleryImage key={i} image={image} id={image.id}/>
             })}
         </div> : 
         <div><h3 style={{lineHeight:1.5}}>No images available for this search（─.─||）</h3></div>}

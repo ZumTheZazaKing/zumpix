@@ -9,6 +9,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 const Home = lazy(() => import('./pages/Home').then(module => ({default:module.Home})));
 const Dashboard = lazy(() => import('./pages/Dashboard').then(module => ({default:module.Dashboard})));
 const Search = lazy(() => import('./pages/Search').then(module => ({default:module.Search})));
+const Pixture = lazy(() => import('./pages/Pixture').then(module => ({default:module.Pixture})));
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="/dashboard/:userId" element={<Dashboard/>}/>
               <Route path="/search/:query" element={<Search/>}/>
+              <Route path="/pixture/:pixtureId" element={<Pixture/>}/>
           </Routes>
         </Suspense>}
       </div>

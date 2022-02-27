@@ -30,7 +30,7 @@ export default function HomeGallery(){
             {recentImages && recentImages.length > 0 ? 
             <div className={css(dashboardStyles.galleryImages)}>
             {recentImages.map((image,i) => {
-                return <GalleryImage key={i} image={image}/>
+                return <GalleryImage key={i} image={image} id={image.id}/>
             })}
         </div> : 
         <div><CircularProgress disableShrink size={60} thickness={5}/></div>}

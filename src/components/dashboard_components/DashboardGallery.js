@@ -33,12 +33,12 @@ export default function DashboardGallery(props){
             <h3 className={css(dashboardStyles.galleryTitle)}>{username}'s Gallery</h3>
             <br/>
             {images && images.length > 0 ? 
-            <div className={css(dashboardStyles.galleryImages)}>
-            {images.map((image,i) => {
-                return <GalleryImage key={i} image={image}/>
-            })}
-        </div> : 
-        <div><CircularProgress disableShrink size={60} thickness={5}/></div>}
+                <div className={css(dashboardStyles.galleryImages)}>
+                {images.map((image,i) => {
+                    return <GalleryImage key={i} image={image} id={image.id}/>
+                })}
+            </div> : 
+            <div><CircularProgress disableShrink size={60} thickness={5}/></div>}
         </div>
     )
 }
